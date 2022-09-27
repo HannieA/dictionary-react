@@ -5,7 +5,6 @@ import Meanings from "./Meanings";
 import Phonetics from "./Phonetics";
 
 export default function Results(props) {
-  console.log(props.results.phonetics);
   if (props.results) {
     return (
       <div className="Results">
@@ -33,7 +32,5 @@ export default function Results(props) {
         })}
       </div>
     );
-  } else {
-    return null;
-  }
+  } else return null;
 }
