@@ -1,0 +1,23 @@
+.Phonetics .text {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.Phonetics a {
+  border: 1px solid#fabddb;
+  border-radius: 30px;
+  padding: 10px 15px;
+  background-color: white;
+  text-decoration: none;
+  color: #ec9fc6;
+}
+
+.Phonetics a:hover {
+  background-color: #ec9fc6;
+  text-decoration: none;
+  color: white;
+}
+
+.Phonetics p {
+  margin-top: 30px;
+}

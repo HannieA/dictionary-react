@@ -1,0 +1,9 @@
+.Meanings h3 {
+  font-size: 25px;
+  font-style: bold;
+}
+
+.Meanings .example {
+  font-style: italic;
+  color: grey;
+}
