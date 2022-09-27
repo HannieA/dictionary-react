@@ -9,17 +9,16 @@ export default function Phonetics(props) {
   // const usPhonetics = props.phonetics.filter((item) =>
   //   item.audio.includes("us.mp3")
   // );
-  if (props.phonetics[0].audio) {
-    return (
-      <div className="Phonetics">
-        <p>
-          {" "}
-          <a href={props.phonetics[0].audio} target="_blank" rel="noreferrer">
-            {/* <FontAwesomeIcon icon={faFileAudio} /> */} Listen
-          </a>
-          <span className="text">{props.phonetics[0].text}</span>
-        </p>
-      </div>
-    );
-  } else return null;
+
+  return (
+    <div className="Phonetics">
+      <p>
+        {" "}
+        <a href={props.phonetics.audio} target="_blank" rel="noreferrer">
+          {/* <FontAwesomeIcon icon={faFileAudio} /> */} Listen
+        </a>
+        <span className="text">{props.phonetics.text}</span>
+      </p>
+    </div>
+  );
 }
