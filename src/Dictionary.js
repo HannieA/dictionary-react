@@ -35,16 +35,17 @@ export default function Dictionary() {
   function handleValue(event) {
     setValue(event.target.value);
   }
-
-  return (
-    <div className="Dictionary">
-      <form onSubmit={search}>
-        <h1>What word are you looking for?</h1>
-        <input type="search" onChange={handleValue} />
-        <p className="hint">sunset, picture, glass, etc</p>
-      </form>
-      <Results results={result} />
-      <Photos photos={photos} />
-    </div>
-  );
+  if (setResult) {
+    return (
+      <div className="Dictionary">
+        <form onSubmit={search}>
+          <h1>What word are you looking for?</h1>
+          <input type="search" onChange={handleValue} />
+          <p className="hint">sunset, picture, glass, etc</p>
+        </form>
+        <Results results={result} />
+        <Photos photos={photos} />
+      </div>
+    );
+  } else return <h2>This word was not found</h2>;
 }
