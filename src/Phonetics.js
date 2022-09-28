@@ -1,24 +1,30 @@
+import { text } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faFileAudio } from "@fortawesome/free-regular-svg-icons";
 
 import "./Phonetics.css";
 
 export default function Phonetics(props) {
-  // console.log(usPhonetics);
-  // const usPhonetics = props.phonetics.filter((item) =>
-  //   item.audio.includes("us.mp3")
-  // );
+  let audioItem = "";
+  let textItem = "";
 
-  return (
-    <div className="Phonetics">
-      <p>
-        {" "}
-        <a href={props.phonetics.audio} target="_blank" rel="noreferrer">
-          {/* <FontAwesomeIcon icon={faFileAudio} /> */} Listen
-        </a>
-        <span className="text">{props.phonetics.text}</span>
-      </p>
-    </div>
-  );
+  if (props.phonetics.length > 0) {
+    audioItem = props.phonetics.find((item) => item.audio).audio;
+    textItem = props.phonetics.find((item) => item.text).text;
+  }
+
+  if (audioItem !== "") {
+    return (
+      <div className="Phonetics">
+        <p>
+          {" "}
+          <a href={audioItem} target="_blank" rel="noreferrer">
+            Listen
+          </a>
+          <span className="text">{textItem}</span>
+        </p>
+      </div>
+    );
+  } else {
+    return <div className="Phonetics"></div>;
+  }
 }

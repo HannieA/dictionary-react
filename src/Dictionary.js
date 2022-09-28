@@ -11,6 +11,10 @@ export default function Dictionary() {
   const [photos, setPhotos] = useState("");
 
   function showResponse(response) {
+    console.log("response");
+    console.log(response);
+    console.log("response.length");
+    console.log(response.length);
     setResult(response.data[0]);
   }
 
